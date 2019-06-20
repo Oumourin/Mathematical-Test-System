@@ -1,5 +1,5 @@
 //
-// Created by ÍõÃ¯ÁÖ on 2019/6/20.
+// Created by ç‹èŒ‚æ— on 2019/6/20.
 //
 
 #ifndef MATHEMATICAL_TEST_SYSTEM_STUDENT_H
@@ -12,11 +12,11 @@ class Student {
 public:
     string studentName;
     int getScoer;
-    // »ñµÃµÄÌâÄ¿
+    // è·å¾—çš„é¢˜ç›®
     vector<Topic> topics;
-    // Ä¬ÈÏ¹¹Ôìº¯Êı
+    // é»˜è®¤æ„é€ å‡½æ•°
     Student(string studentName);
-    // ´ğÌâ·½·¨
+    // ç­”é¢˜æ–¹æ³•
     void answerQuestion();
     friend ostream & operator << (ostream &ostream1, Student &student);
 };

@@ -1,19 +1,19 @@
 //
-// Created by ÍõÃ¯ÁÖ on 2019/6/20.
+// Created by ç‹èŒ‚æ— on 2019/6/20.
 //
 
 #include "Topic.h"
 
 
-// Ä¬ÈÏ¹¹Ôìº¯Êı
+// é»˜è®¤æ„é€ å‡½æ•°
 Topic::Topic()
 {
     answers = 3;
     default_random_engine randomEngine;
-    // »ñÈ¡Á½¸ö50ÒÔÄÚµÄËæ»úÊı
+    // è·å–ä¸¤ä¸ª50ä»¥å†…çš„éšæœºæ•°
     if (randomEngine()%2==0)
     {
-        // ÎªÅ¼ÊıÊ±ÔËËãÎª¼Ó·¨£¬ÆæÊıÊ±Îª¼õ·¨
+        // ä¸ºå¶æ•°æ—¶è¿ç®—ä¸ºåŠ æ³•ï¼Œå¥‡æ•°æ—¶ä¸ºå‡æ³•
         operation = "+";
         operationType = true;
     }
@@ -25,9 +25,9 @@ Topic::Topic()
     {
         int getX = randomEngine()%50;
         int getY = randomEngine()%50;
-        // Á½ÊıÖ®ºÍ´óÓÚ50»òĞ¡ÓÚ0Ê±²»Ìø³öÑ­»·
-        // Ëæ»úÊıÉú³ÉÆ÷¿ÉÒÔ±£Ö¤Êı×Ö·Ç¸º
-        // È¡Óà¿ÉÒÔ±£Ö¤Êı×ÖĞ¡ÓÚ50
+        // ä¸¤æ•°ä¹‹å’Œå¤§äº50æˆ–å°äº0æ—¶ä¸è·³å‡ºå¾ªç¯
+        // éšæœºæ•°ç”Ÿæˆå™¨å¯ä»¥ä¿è¯æ•°å­—éè´Ÿ
+        // å–ä½™å¯ä»¥ä¿è¯æ•°å­—å°äº50
         while (getX+getY > 50) {
             getX = randomEngine() % 50;
             getY = randomEngine() % 50;
@@ -39,7 +39,7 @@ Topic::Topic()
     else {
         int getX = randomEngine() % 50;
         int getY = randomEngine() % 50;
-        // Á½ÊıÏà¼õ²»Îª¸ºÊ±Ìø³öÑ­»·
+        // ä¸¤æ•°ç›¸å‡ä¸ä¸ºè´Ÿæ—¶è·³å‡ºå¾ªç¯
         while (getX - getY < 0){
             getX = randomEngine() % 50;
             getY = randomEngine() % 50;
@@ -77,21 +77,21 @@ int Topic::getScore() {
 
 int Topic::getAnswer() {
     while (answers > 0){
-        cout<<"Äú»¹ÓĞ"<<answers<<"×÷´ğ»ú»á£¡"<<endl;
+        cout<<"æ‚¨è¿˜æœ‰"<<answers<<"ä½œç­”æœºä¼šï¼"<<endl;
         cout<< *this;
         int getMyAnswer;
         cin>>getMyAnswer;
         if (checkAnswer(getMyAnswer)){
-            cout<<"¹§Ï²Äú»Ø´ğÕıÈ·£¡"<<"±¾ÌâµÃ·ÖÎª£º"<<getScore();
+            cout<<"æ­å–œæ‚¨å›ç­”æ­£ç¡®ï¼"<<"æœ¬é¢˜å¾—åˆ†ä¸ºï¼š"<<getScore();
             return getScore();
         }
         else{
             --answers;
             if (answers == 0){
-                cout<<"ÄúÃ»ÓĞÄÜ»Ø´ğ¶Ô´ËÌâ£¡"<<endl;
+                cout<<"æ‚¨æ²¡æœ‰èƒ½å›ç­”å¯¹æ­¤é¢˜ï¼"<<endl;
                 return getScore();
             } else{
-                cout<<"»Ø´ğ´íÎó£¡Äú»¹ÓĞ"<<answers<<"´Î»Ø´ğ»ú»á,Çë¼ÌĞø×÷´ğ£¡"<<endl;
+                cout<<"å›ç­”é”™è¯¯ï¼æ‚¨è¿˜æœ‰"<<answers<<"æ¬¡å›ç­”æœºä¼š,è¯·ç»§ç»­ä½œç­”ï¼"<<endl;
             }
         }
     }

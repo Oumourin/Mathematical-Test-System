@@ -1,5 +1,5 @@
 //
-// Created by ÍõÃ¯ÁÖ on 2019/6/20.
+// Created by ç‹èŒ‚æ— on 2019/6/20.
 //
 
 #include "Student.h"
@@ -16,5 +16,5 @@ void Student::answerQuestion() {
 }
 
 ostream & operator << (ostream &ostream1, Student &student){
-    cout<<student.studentName<<"ÄúºÃ£¡"<<"ÄúµÄµÃ·ÖÎª£º"<<student.getScoer<<endl;
+    cout<<student.studentName<<"æ‚¨å¥½ï¼"<<"æ‚¨çš„å¾—åˆ†ä¸ºï¼š"<<student.getScoer<<endl;
 }
