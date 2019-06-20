@@ -3,6 +3,7 @@
 //
 #include <random>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -22,6 +23,7 @@ public:
     Topic();
     int getAnswer();
     int getScore();
+    void recordError();
 private:
     int result;
 };

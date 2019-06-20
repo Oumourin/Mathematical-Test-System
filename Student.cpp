@@ -18,3 +18,12 @@ void Student::answerQuestion() {
 ostream & operator << (ostream &ostream1, Student &student){
     cout<<student.studentName<<"您好！"<<"您的得分为："<<student.getScoer<<endl;
 }
+
+void Student::recordScore() {
+    auto time = chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+    fstream file;
+    file.open("Score.txt", ios::app);
+    file<<"姓名："<<studentName<<"  "<<"获得成绩："<<getScore<<"  "<<"记录时间:"<<std::put_time(std::localtime(&time), "%Y-%m-%d %H.%M.%S")<<endl;
+    file.close();
+}
+

@@ -92,10 +92,19 @@ int Topic::getAnswer() {
             --answers;
             if (answers == 0){
                 cout<<"您没有能回答对此题！"<<endl;
+                recordError();
                 return getScore();
             } else{
                 cout<<"回答错误！"<<endl;
             }
         }
     }
+}
+
+
+void Topic::recordError() {
+        fstream file;
+        file.open("Error.txt", ios::app);
+        file<<x<<operation<<y<<"="<<result<<endl;
+        file.close();
 }

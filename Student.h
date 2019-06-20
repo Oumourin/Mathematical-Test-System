@@ -6,6 +6,11 @@
 #define MATHEMATICAL_TEST_SYSTEM_STUDENT_H
 
 #include "Topic.h"
+#include <fstream>
+#include <chrono>
+#include <ctime>
+#include <iomanip>
+
 
 
 class Student {
@@ -18,6 +23,7 @@ public:
     Student(string studentName);
     // 答题方法
     void answerQuestion();
+    void recordScore();
     friend ostream & operator << (ostream &ostream1, Student &student);
 };
 
