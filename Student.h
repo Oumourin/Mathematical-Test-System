@@ -1,0 +1,14 @@
+//
+// Created by Õı√Ø¡÷ on 2019/6/20.
+//
+
+#ifndef MATHEMATICAL_TEST_SYSTEM_STUDENT_H
+#define MATHEMATICAL_TEST_SYSTEM_STUDENT_H
+
+
+class Student {
+
+};
+
+
+#endif //MATHEMATICAL_TEST_SYSTEM_STUDENT_H
