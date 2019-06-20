@@ -11,7 +11,7 @@
 class Student {
 public:
     string studentName;
-    int getScoer;
+    int getScore;
     // 获得的题目
     vector<Topic> topics;
     // 默认构造函数

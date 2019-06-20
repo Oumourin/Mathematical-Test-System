@@ -6,12 +6,12 @@
 
 Student::Student(string studentName):topics(10) {
     this->studentName=studentName;
-    getScoer=0;
+    getScore=0;
 }
 
 void Student::answerQuestion() {
     for (int i = 0; i < topics.size(); ++i) {
-        getScoer += topics[i].getAnswer();
+        getScore += topics[i].getAnswer();
     }
 }
 
