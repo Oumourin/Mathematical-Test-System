@@ -13,7 +13,7 @@ class UI {
 public:
     static void startUI();
     static void functionUI();
-    static void chioceFunction();
+    static void choiceFunction();
     static void startPracticing();
     static void getHistoryRecord();
     static void practiceError();

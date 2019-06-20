@@ -42,6 +42,7 @@ void UI::getHistoryRecord() {
         {
             cout<<getLine<<endl;
         }
+        cout<<"请按任意键继续"<<endl;
     } else{
         cout<<"没有历史记录！"<<endl;
     }
@@ -57,6 +58,7 @@ void UI::practiceError() {
         {
             cout<<getLine<<endl;
         }
+        cout<<"请按任意键继续"<<endl;
     } else{
         cout<<"没有错题！"<<endl;
     }
@@ -68,7 +70,7 @@ void UI::exitSystem() {
     cout<<"============================================"<<endl;
 }
 
-void UI::chioceFunction() {
+void UI::choiceFunction() {
     cout<<"选择所需要的功能：";
     int getInput;
     cin>>getInput;
@@ -77,15 +79,18 @@ void UI::chioceFunction() {
             startPracticing();
             break;
         case 2:
-            practiceErroe();
+            practiceError();
+            getchar();
+            getchar();
             break;
         case 3:
             getHistoryRecord();
+            getchar();
+            getchar();
             break;
         case 4:
             exitSystem();
             exit(0);
-            break;
         default:
             cout<<"输入错误，请重新输入。。。。"<<endl;
     }
