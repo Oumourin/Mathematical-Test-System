@@ -8,7 +8,7 @@
 // 默认构造函数
 Topic::Topic()
 {
-    result = 0;
+    answers = 3;
     default_random_engine randomEngine;
     // 获取两个50以内的随机数
     if (randomEngine()%2==0)
@@ -60,4 +60,39 @@ bool Topic::checkAnswer(int answer)
     bool checkResult;
     answer == result?checkResult=true:checkResult=false;
     return checkResult;
+}
+
+int Topic::getScore() {
+    switch (answers){
+        case 3:
+            return 10;
+        case 2:
+            return 7;
+        case 1:
+            return 5;
+        case 0:
+            return 0;
+    }
+}
+
+int Topic::getAnswer() {
+    while (answers > 0){
+        cout<<"您还有"<<answers<<"作答机会！"<<endl;
+        cout<< *this;
+        int getMyAnswer;
+        cin>>getMyAnswer;
+        if (checkAnswer(getMyAnswer)){
+            cout<<"恭喜您回答正确！"<<"本题得分为："<<getScore();
+            return getScore();
+        }
+        else{
+            --answers;
+            if (answers == 0){
+                cout<<"您没有能回答对此题！"<<endl;
+                return getScore();
+            } else{
+                cout<<"回答错误！您还有"<<answers<<"次回答机会,请继续作答！"<<endl;
+            }
+        }
+    }
 }

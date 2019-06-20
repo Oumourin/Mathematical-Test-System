@@ -15,10 +15,13 @@ public:
     int y;
     string operation;
     bool operationType;
+    int answers;
 
     friend ostream & operator << (ostream &ostream1, Topic &topic);
     bool checkAnswer(int answer);
     Topic();
+    int getAnswer();
+    int getScore();
 private:
     int result;
 };
