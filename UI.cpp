@@ -47,7 +47,7 @@ void UI::getHistoryRecord() {
     }
 }
 
-void UI::practiceErroe() {
+void UI::practiceError() {
     fstream file;
     file.open("Error.txt", ios::in);
     if(file.is_open())

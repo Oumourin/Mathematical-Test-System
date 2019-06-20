@@ -11,13 +11,13 @@ using namespace std;
 
 class UI {
 public:
-    void startUI();
-    void functionUI();
-    void chioceFunction();
-    void startPracticing();
-    void getHistoryRecord();
-    void practiceErroe();
-    void exitSystem();
+    static void startUI();
+    static void functionUI();
+    static void chioceFunction();
+    static void startPracticing();
+    static void getHistoryRecord();
+    static void practiceError();
+    static void exitSystem();
 };
 
 
