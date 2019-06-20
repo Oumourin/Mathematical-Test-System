@@ -24,6 +24,7 @@ public:
     // 答题方法
     void answerQuestion();
     void recordScore();
+    string getMyLevel();
     friend ostream & operator << (ostream &ostream1, Student &student);
 };
 
