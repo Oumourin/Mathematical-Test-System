@@ -9,7 +9,9 @@
 Topic::Topic()
 {
     answers = 3;
-    default_random_engine randomEngine;
+    // 使用底层随机数种子
+    random_device device;
+    default_random_engine randomEngine(device());
     // 获取两个50以内的随机数
     if (randomEngine()%2==0)
     {
@@ -29,6 +31,7 @@ Topic::Topic()
         // 随机数生成器可以保证数字非负
         // 取余可以保证数字小于50
         while (getX+getY > 50) {
+
             getX = randomEngine() % 50;
             getY = randomEngine() % 50;
         }
@@ -82,7 +85,7 @@ int Topic::getAnswer() {
         int getMyAnswer;
         cin>>getMyAnswer;
         if (checkAnswer(getMyAnswer)){
-            cout<<"恭喜您回答正确！"<<"本题得分为："<<getScore();
+            cout<<"恭喜您回答正确！"<<"本题得分为："<<getScore()<<endl;
             return getScore();
         }
         else{
@@ -91,7 +94,7 @@ int Topic::getAnswer() {
                 cout<<"您没有能回答对此题！"<<endl;
                 return getScore();
             } else{
-                cout<<"回答错误！您还有"<<answers<<"次回答机会,请继续作答！"<<endl;
+                cout<<"回答错误！"<<endl;
             }
         }
     }
