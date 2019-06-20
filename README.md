@@ -3,10 +3,14 @@
 
 ##  开发环境
 >  OS:Windows 10 1903 && Manjaro 18.0.4
+>
 >  IDE：Clion 2018.1.4
+>
 >  C++版本 C++11
+>
 >  CMAKE Version 3.14
->  编码环境：UTF-8
+>
+>  编码：UTF-8
 
 ##  学生类(Student)
 定义在头文件:Student.h中
