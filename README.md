@@ -1,6 +1,8 @@
 # Mathematical-Test-System
 小学数学测验 面向小学1~2年级学生，随机选择两个整数和加减运算符组成算式要求学生解答。
 
+**Windows下随机数生成会出现问题！！！**
+
 ##  开发环境
 >  OS:Windows 10 1903 && Manjaro 18.0.4
 >
